@@ -1,0 +1,144 @@
+body {
+	/*alterando a distancia externa dos elementos para 0 pixels*/
+	margin: 0px;
+	/*alterando a distancia do elemento entre a borda para 0 pixels*/
+	padding: 0px;
+	/*definindo uma fonte*/
+	font: 90% times new roman, hevetica, sans-serif;
+	/*alinhando texto no centro*/
+	text-align: center;
+	/*alterando cor das fontes*/
+	color: #9370db;
+	/*alterando cor de fundo*/
+	background:#FFFAF0;
+}
+#principal {
+	/*alterando cor das fontes do texto*/
+	color: #9932CC;
+	/*alterando cor de plano de fundo*/
+	background:#e6e6fa;
+	/*definindo uma borda de baixo, espessura e cor*/
+	border-bottom: 1px solid #9932CC;
+}
+
+#cabecalho {
+	/*alterando uma cor de fonte*/
+	color: #C0C0C0;
+	/*definindo uma fonte do texto*/
+	font: 90% times new roman, hevetica, sans-serif;
+	/*definindo uma borda, espessura e cor*/
+	border: 1px solid #9370db;
+	/*alterando a cor de fundo*/
+	background: #9932CC;
+}
+
+#principal2 {
+	/*alterando a cor das fontes*/
+	color: #C0C0C0;
+	/*definindo fontes do texto*/
+	font: 90% times new roman, hevetica, sans-serif;
+	/*definindo uma borda, espessura e cor*/
+	border: 1px solid #9370db;
+	/*alterando a cor de fundo*/
+	background: #9932CC;
+}
+
+#imglogo {
+	/*definindo a altura*/
+	height: 200px;
+	/*definindo a largura*/
+	width: 200px;
+	/*alinhando no centro*/
+	text-align: center;
+}
+	
+
+#imagem {
+	/*definindo a altura*/
+	height: 200px;
+	/*alterando as distancias externas dos elementos*/
+	margin:80px 100px;
+	/*alterando as distancias dos elementos entre a borda*/
+	padding:20px 20x;
+	/*alinhando o texto a esquerda*/
+	text-align: left;
+	
+}
+.menu {
+	/*alterando o menu para os elementos se posicionarem ao lado outro*/
+	display:inline-block;
+}
+	
+ul {
+	/*alterando o distanciamento da parte externa ao redor do elemento para 0 pixels*/
+	margin: 0px;
+	/*definindo a distancia entre um elemento e a borda para nenhum pixels*/
+	padding: 0px;
+	/*nenhum marcador nas listas*/
+	list-style: none;
+	/*largura da pagina*/
+	width: 175px;
+	/*fonte da pagina*/
+	font-family: Arial;
+	/*alterando o tamanho da fonte*/
+	font-size: 16px;
+	
+}
+
+ul li {
+	/*alterando a posicao do elemento de acordo com sua posicao inicial*/
+	position: relative;
+}
+
+li ul {
+	/*alterando a posicao para qualquer lugar na pagina*/
+	position: absolute;
+	/*definindo o elemento para flutuar a esquerda do bloco*/
+	left: 174px;
+	/*definindo a posicao vertical para 0 pixels*/
+	top: 0px;
+	/*alterando o elemento para nao ser exibido*/
+	display: none;
+}
+
+ul li a {
+	/*alterando a forma do elemento exibido*/
+	display: block;
+	/*removendo o sublinhado dos links*/
+	text-decoration: none;
+	/*alterando a cor da fonte*/
+	color: white;
+	/*alterando a cor de plano de fundo*/
+	background-color: #9932cc;
+	/*definindo a distancia entre um elemento e a borda para 5 pixels*/
+	padding: 5px;
+	/*definindo a borda, a espessura e a cor*/
+	border: 1px solid #FFFAF0;
+	/*definindo a espessura da borda de baixo*/
+	border-bottom: 0px;
+}
+
+li:hover ul {
+	/*alterando a forma do elemento que sera exibido no menu*/
+	display: block;
+}
+
+a:hover {
+	/*alterando a cor de fundo do link quando o mouse passa em cima*/
+	background-color: #9370db;
+}
+/*alterando o tamanho da fonte, e alinhando o texto do paragrafo da classe livros.*/
+.livros{
+	text-align: justify;
+	font-size: 15px;
+}
+/*centralizando tabela.*/
+table {
+	margin:auto;
+}
+/*alterando o tamanho da fonte, e alinhando o texto do paragrafo da classe infosobre*/
+.infosobre {
+	text-align: justify;
+	font-size: 15px;
+}
+

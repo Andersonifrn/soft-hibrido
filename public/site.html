@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- título da página -->
+<title>Memory's ALARA</title>
+
+	<!-- aplicando um ícone no cabeçalho -->
+	<link rel = "icon"href="logoAlara.png"/>
+	
+	<!-- aplicando o estilo da página -->
+	<!--<link rel = "stylesheet"href="meusite.css"/> -->
+	
+ <!-- importando o link do css do framework do bootStrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <style >
+	body {
+	/*alterando a distancia externa dos elementos para 0 pixels*/
+	margin: 0px;
+	/*alterando a distancia do elemento entre a borda para 0 pixels*/
+	padding: 0px;
+	/*definindo uma fonte*/
+	font: 90% times new roman, hevetica, sans-serif;
+	/*alinhando texto no centro*/
+	text-align: center;
+	/*alterando cor das fontes*/
+	color: #9370db;
+	/*alterando cor de fundo*/
+	/*background:#FFFAF0;*/
+	/*Colocando uma borde*/
+	/*border: 3px solid red;*/
+	background: white;
+}
+
+
+#imglogo {
+	/*definindo a altura*/
+	height: 200px;
+	/*definindo a largura*/
+	width: 200px;
+	/*alinhando no centro*/
+	text-align: center;
+}
+	
+
+#imagem {
+	/*definindo a altura*/
+	height: 200px;
+	/*alterando as distancias externas dos elementos*/
+	margin:80px 100px;
+	/*alterando as distancias dos elementos entre a borda*/
+	padding:20px 20x;
+	/*alinhando o texto a esquerda*/
+	text-align: left;
+	
+}
+.menu {
+	/*alterando o menu para os elementos se posicionarem ao lado outro*/
+	display:inline-block;
+}
+	
+ul {
+	/*alterando o distanciamento da parte externa ao redor do elemento para 0 pixels*/
+	margin: 0px;
+	/*definindo a distancia entre um elemento e a borda para nenhum pixels*/
+	padding: 0px;
+	/*nenhum marcador nas listas*/
+	list-style: none;
+	/*largura da pagina*/
+	width: 175px;
+	/*fonte da pagina*/
+	font-family: Arial;
+	/*alterando o tamanho da fonte*/
+	font-size: 16px;
+	
+}
+
+ul li {
+	/*alterando a posicao do elemento de acordo com sua posicao inicial*/
+	position: relative;
+}
+
+li ul {
+	/*alterando a posicao para qualquer lugar na pagina*/
+	position: absolute;
+	/*definindo o elemento para flutuar a esquerda do bloco*/
+	left: 174px;
+	/*definindo a posicao vertical para 0 pixels*/
+	top: 0px;
+	/*alterando o elemento para nao ser exibido*/
+	display: none;
+}
+
+ul li a {
+	/*alterando a forma do elemento exibido*/
+	display: block;
+	/*removendo o sublinhado dos links*/
+	text-decoration: none;
+	/*alterando a cor da fonte*/
+	color: white;
+	/*alterando a cor de plano de fundo*/
+	background-color: #9932cc;
+	/*definindo a distancia entre um elemento e a borda para 5 pixels*/
+	padding: 5px;
+	/*definindo a borda, a espessura e a cor*/
+	border: 1px solid #FFFAF0;
+	/*definindo a espessura da borda de baixo*/
+	border-bottom: 0px;
+}
+
+li:hover ul {
+	/*alterando a forma do elemento que sera exibido no menu*/
+	display: block;
+}
+
+a:hover {
+	/*alterando a cor de fundo do link quando o mouse passa em cima*/
+	
+
+}
+/*alterando o tamanho da fonte, e alinhando o texto do paragrafo da classe livros.*/
+.livros{
+	text-align: justify;
+	font-size: 15px;
+}
+/*centralizando tabela.*/
+table {
+	margin:auto;
+}
+/*alterando o tamanho da fonte, e alinhando o texto do paragrafo da classe infosobre*/
+.infosobre {
+	text-align: justify;
+	font-size: 15px;
+}
+
+#imagem{
+	border: 2px solid blue;
+	
+}
+#nav{
+	border: 1px solid rgb(0, 0, 0);
+	background-color: rgb(150, 223, 223);
+}
+#container-fluid{
+	
+}
+.descricaolinha1{
+	border: 2px solid rgb(68, 33, 150);
+	padding: auto;
+	
+}
+#tabela{
+	background:#F5F5DC;
+	height: 60px;
+	margin-top: 1%;
+	
+}
+
+.primeroscards{
+	/*border: 2px solid chartreuse;*/
+	display: flex;
+	height: 200%;
+	align-items: center;
+	justify-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap ;
+	background: white;
+}
+
+.cards{
+	border: 3px rgb(96, 106, 244);
+	background: #9932cc;
+	height: 100%;
+	width: 20%;
+	
+}
+.cards1{
+	background: #afdcee;
+	width: 20%;
+	border-radius: 19px;
+	margin: 1%;
+	border: 3px solid white;
+}
+.conteudocard{
+	border: 3px solid white;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #46bde4;
+	color:white;
+	margin: 3%;
+}
+
+/*Estilhizando as imagens dos cards*/
+#imagemcard1{
+	height: 150px;
+  margin-top: 9%;
+}
+.carrossel-cards{
+	height: 10%;
+	width: 30%;
+	margin-left: 3%;
+	margin-top: 1%;
+}
+#imagemcard-Slide{
+	height: 500px;
+}
+
+/*Ajustando o conjunto de carossel*/
+.conjunto-carossel{
+	display: flex;
+    justify-content: center;
+}
+
+ </style>
+</head>
+<body>
+
+	
+	<!-- criando um div para armazenar informações da tela principal -->
+	<nav class="navbar navbar-expand-lg " id="nav">
+		<div class="container-fluid" id="container-fluid">
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Dropdown
+				</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="#">Action</a></li>
+				  <li><a class="dropdown-item" href="#">Another action</a></li>
+				  <li><hr class="dropdown-divider"></li>
+				  <li><a class="dropdown-item" href="#">Something else here</a></li>
+				</ul>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+			  </li>
+			</ul>
+			<form class="d-flex" role="search">
+			  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		  </div>
+		</div>
+	  </nav>
+	   <div class="conjunto-carossel">
+	  <!-- Colocando carrossel -->
+	  <div class="carrossel-cards">
+	  <div id="carouselExampleCaptions" id="carouselExampleInterval"  class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner" data-bs-interval="10000">
+		  <div class="carousel-item active">
+			<img src="tardedemais.jpeg" id="imagemcard-Slide"class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+			  <h5>First slide label</h5>
+			  <p>Some representative placeholder content for the first slide.</p>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="ladofeiodoamor.jpeg" id="imagemcard-Slide" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+			  <h5>Second slide label</h5>
+			  <p>Some representative placeholder content for the second slide.</p>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="todasassuasimperfeicoes.jpeg"id="imagemcard-Slide" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+			  <h5>Third slide label</h5>
+			  <p>Some representative placeholder content for the third slide.</p>
+			</div>
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+	  </div> 
+	   </div>
+	  <!-- Os card com 3 Sub-cards com imagem e conteúdos -->
+	   <div class="primeroscards">
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  
+	   </div>
+	   <div class="primeroscards">
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  
+	   </div>
+	   <div class="primeroscards">
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  <div class="cards1">
+		<div class="cardimagem"><a href="livro5.html"> <img src="ladofeiodoamor.jpeg" id="imagemcard1"></a></div>
+		<div class="conteudocard"><P>Compre este ótimo livro.<br>   
+       Por apenas  170,00 Reais</P>
+		</div>
+	  </div>
+	  
+	   </div>
+	<!-- criando um div para armazenar as imagens e uma tabela -->
+	<div >
+	<!-- criando uma tabela para inserir as imagens -->
+	<table border="1" id="tabela">
+	
+		<tr>
+		<!-- mesclando 3 colunas da tabela -->
+			<th colspan="3">PRINCIPAIS OBRAS</th>
+		</tr>
+		<tr>
+		<!-- armazenando as imagens na tabela criada, e os links das páginas de cada imagem. -->
+			<td class="descricaolinha1"><a href="livro1.html"><img src="assimqueacaba.jpeg" id="imagem"/></a></td>
+			<td class="descricaolinha1"><a href="livro2.html"><img src="assimquecomeca.jpeg" id="imagem"/></a></td>
+			<td class="descricaolinha1"><a href="livro3.html"><img src="asmilpartesdomeucoracao.jpeg" id="imagem"/></a></td>
+		</tr>
+			
+		<tr>
+		<!-- armazenando as imagens na tabela criada, e os links das páginas de cada imagem. -->
+	    	<td class="descricao"><a href="livro4.html"><img src="ateoveraoterminar.jpeg" id="imagem"/></a></td>
+			<td class="descricao"><a href="livro5.html"><img src="ladofeiodoamor.jpeg" id="imagem"/></a></td>
+			<td class="descricao"><a href="livro6.html"><img src="tardedemais.jpeg" id="imagem"/></a></td>
+		</tr>
+		<tr>
+		<!-- armazenando as imagens na tabela criada, e os links das páginas de cada imagem. -->	
+			<td class="descricao">
+			<a href="livro7.html"><img src="todasassuasimperfeicoes.jpeg" id="imagem"/></a>
+			<h3>Anderson</h3></td>
+			<td class="descricao"><a href="livro8.html"><img src="verity.jpeg" id="imagem"/></a></td>
+			<td class="descricao"><a href="livro9.html"><img src="9novembro.jpeg" id="imagem"/></a></td>
+		</tr>
+		<tr>
+		
+		<!-- mesclando 3 colunas da tabela, inserindo a imagem na tabela e o link da página -->	
+			<td colspan= "3" class="descricao"><a href="livro10.html"><img src="umasegundachance.jpeg" id="imagem"/></a></td>
+		</tr>
+	
+	</table>
+	
+	</div>
+
+	<a href="#">Link</a>
+ <!-- importando o link do script do framework do bootStrap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+
+</body>
+</html>

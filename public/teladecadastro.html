@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+
+    <!-- aplicando um ícone no cabeçalho -->
+	<link rel = "icon"href="logoAlara.png"/>
+	
+    <style>
+        /* definindo as propriedades de margem e preenchimento de todos os elementos como 0 e utilizando 'border-box', que inclui preenchimento e bordas no cálculo total da largura e altura. */
+        *{margin:0; padding: 0; box-sizing: border-box;}
+
+        /* alterando a cor de fundo do corpo da página. */
+        body {
+            background-color:#FFFAF0;
+        }
+
+        form {
+             /* alterando a cor de fundo do formulário para branco. */
+            background-color: white;
+            /* alterando a largura máxima do formulário para 500 pixels. */
+            max-width: 500px;
+            /* alterando a largura do formulário para 70%. */
+            width: 70%;
+            /* alterando o preenchimento interno do formulário para 20 pixels. */
+            padding: 20px;
+            /* alterando a posição do formulário para absoluta. */
+            position: absolute;
+            /* alterando a posição esquerda do formulário para 50%. */
+            left: 50%;
+            /* alterando a posição superior do formulário para 50%. */
+            top: 50%;
+            /* movendo o formulário 50% para a esquerda e 50% para cima, centralizando na tela. */
+            transform: translate(-50%, -50%);
+
+        }
+
+        form h3{
+            /* alinhando o texto no centro dentro da tag h3. */
+            text-align: center;
+            /* alterando a cor do texto. */
+            color:#9370db ;
+            /* alterando a família de fontes na tag h3. */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        form input[type=text],
+        form input[type=password] {
+            /* alterando a largura dos campos de entrada de texto e senha para 100%. */
+            width: 100%;
+            /* alterando a altura dos campos de entrada de texto e senha para 45 pixels. */
+            height: 45px;
+            /* definindo a borda dos campos de entrada de texto e senha como uma borda sólida de 1 pixel. */
+            border: 1px solid #ccc;
+            /* alterando o preenchimento à esquerda dos campos de entrada de texto e senha para 10 pixels. */
+            padding-left: 10px;
+             /* alterando a margem vertical dos campos de entrada de texto e senha para 10 pixels e a margem horizontal para 0. */
+            margin: 10px 0;
+        }
+
+        form input[type=submit]{
+            /* alterando a largura do botão de envio para 100%. */
+            width: 100%;
+            /* alterando a altura do botão de envio para 30 pixels. */
+            height: 30px;
+            /* alterando o cursor como um ponteiro ao passar sobre o botão de envio. */
+            cursor: pointer;
+            /*alterando cor de plano de fundo.*/
+            background: #9370db;
+            /*alterando a cor do texto*/
+            color: white;
+            /*removendo a borda do botao.*/
+            border: 0;
+            /* alterando o raio da borda do botão para 20 pixels. */
+            border-radius: 20px;
+            /* adiciona uma transição suave de 1% para o botão de envio. */
+            transition:1%;
+        }
+        /* definindo o estilo do botão de envio ao passar o mouse sobre ele. */
+        form input[type=submit]:hover{
+            /* alterando a cor de fundo do botão de envio ao passar o mouse sobre ele. */
+            background-color: #845f99;
+        }
+        /* definindo o estilo do campo de texto ao receber o foco. */
+        form input[type=text]:focus{
+            /* removendo o contorno ao redor do campo de texto ao recebê-lo. */
+            outline: 0;
+        }
+        /* definindo o estilo do campo de senha ao receber o foco. */
+        form input[type=password]:focus{
+            /* removendo o contorno ao redor do campo de senha ao recebê-lo. */
+            outline: 0;
+        }
+        /* definindo o estilo para o botão dentro do formulário. */
+        form button{
+            /* definindo a largura do botão para 80%. */
+            width: 80%;
+            /* definindo a altura do botão para 25 pixels. */
+            height: 25px;
+            /* definindo a margem ao redor do botão para 3%. */
+            margin: 3%;
+            /* definindo a margem esquerda do botão para 10%. */
+            margin-left:10% ;
+            /* definindo o cursor como um ponteiro ao passar sobre o botão. */
+            cursor: pointer;
+            /* definindo a cor de fundo do botão. */
+            background-color: #9370db;
+            /* alterando a cor do texto no botão. */
+            color: white;
+            /* removendo a borda do botão. */
+            border: 0;
+            /* alterando o raio da borda do botão para 20 pixels. */
+            border-radius: 20px;
+            /* adicionando uma transição suave de 1% para o botão. */
+            transition:1%;
+            
+        }
+
+        /* definindo o estilo para os links dentro do formulário. */
+        form a{
+            /* definindo a cor do texto do link. */
+            color: white;
+            /* removendo o sublinhado do link. */
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- criando formulário com a ação de redirecionar para "teladelogin.html" quando o formulário for enviado. -->
+    <form action="teladelogin.html">
+        
+        <!-- adicionando título no formulário. -->
+        <h3>Faça seu cadastro</h3>
+
+        <!-- adicionando campo de entrada para o nome do usuário e dizendo é obrigatório. -->
+        <input id="name" type="text" name="nome" placeholder="Digite seu nome..." required/>
+
+        <!-- adicionando campo de entrada para o sobrenome do usuário e dizendo é obrigatório. -->
+        <input id="lastname" type="text" name="sobrenome" placeholder="Digite seu sobrenome..."required/>
+
+        <!-- adicionando campo de entrada para o email do usuário e dizendo é obrigatório. -->
+        <input id="email" type="text" name="email" placeholder="Digite seu email..."required/>
+
+        <!-- adicionando campo de entrada para a senha do usuário e dizendo é obrigatório. -->
+        <input id="password" type="password" name="senha" placeholder="Digite uma senha..."required/>
+
+        <!-- adicionando campo de entrada para confirmar a senha do usuário e dizendo é obrigatório. -->
+        <input id="password" type="password" name="Confirmsenha" placeholder="Confirme sua senha..."required/>
+
+         <!-- adicionando o botão de envio para enviar os dados inseridos ao servidor com o valor "Cadastrar". -->
+        <input type="submit" name="acao" value="Cadastrar"/>
+
+        <!-- adicionando o botão que redireciona para "teladelogin.html". -->
+        <button > <a href="teladelogin.html">Já possui conta? Faça seu login!</a></button>
+
+    </form>
+    
+    <script>
+        // obtendo o elemento de input com o id "email".
+        var email = document.getElementById('email').value;
+
+        // obtendo o elemento de input com o id "password".
+        var password = document.getElementById('senha').value;
+
+        // obtendo o elemento de input com o id "nome".
+        var name = document.getElementById('nome').value;
+
+        // obtendo o elemento de input com o id "sobrenome".
+        var lastname = document.getElementById('sobrenome').value;
+
+        // obtendo o elemento de input com o id "Confirmsenha".
+        var password = document.getElementById('Confirmsenha').value;
+
+
+        // adicionando um evento ao campo de e-mail quando ele recebe o foco.
+        email.addEventListener('focus',()=>{
+            // definindo a cor da borda do campo de e-mail quando recebe o foco.
+            email.style.borderColor = "#5F7CBA"
+        });
+        // adicionando um evento ao campo de e-mail quando ele recebe o foco.
+        email.addEventListener('blur',()=>{
+            // definindo a cor da borda do campo de e-mail quando recebe o foco.
+            email.style.borderColor = "#ccc"
+        });
+        // adicionando um evento ao campo de senha quando ele recebe o foco.
+        password.addEventListener('focus',()=>{
+            // definindo a cor da borda do campo de senha quando recebe o foco.
+            password.style.borderColor = "#5F7CBA"
+        });
+        // adicionando um evento ao campo de senha quando ele recebe o foco.
+        password.addEventListener('blur',()=>{
+            // definindo a cor da borda do campo de senha quando recebe o foco.
+            password.style.borderColor = "#ccc"
+        });
+        // adicionando um evento ao campo de sobrenome quando ele recebe o foco.
+        lastname.addEventListener('focus',()=>{
+            // definindo a cor da borda do campo de sobrenome quando recebe o foco.
+            lastname.style.borderColor = "#5F7CBA"
+        });
+        // adicionando um evento ao campo de sobrenome quando ele recebe o foco.
+        lastname.addEventListener('blur',()=>{
+            // definindo a cor da borda do campo de sobrenome quando recebe o foco.
+            lastname.style.borderColor = "#ccc"
+        });
+        // adicionando um evento ao campo de nome quando ele recebe o foco.
+        name.addEventListener('focus',()=>{
+            // definindo a cor da borda do campo de nome quando recebe o foco.
+            name.style.borderColor = "#5F7CBA"
+        });
+        // adicionando um evento ao campo de nome quando ele recebe o foco.
+        name.addEventListener('blur',()=>{
+            // definindo a cor da borda do campo de nome quando recebe o foco.
+            name.style.borderColor = "#ccc"
+        });
+
+        </script>
+    
+</body>
+</html>

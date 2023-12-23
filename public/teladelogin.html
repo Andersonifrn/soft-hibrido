@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- aplicando um ícone no cabeçalho -->
+	<link rel = "icon"href="logoAlara.png"/>
+	
+    <style>
+        /*definindo as propriedades de margem e preenchimento de todos os elementos como 0 e utilizando 'border-box', que inclui preenchimento e bordas no cálculo total da largura e altura.*/
+        *{margin:0; padding: 0; box-sizing: border-box;}
+
+        /*aplicando a cor de fundo da página*/
+        body {
+            background-color:#FFFAF0;
+        }
+
+        /*aplicando os estilos para o formulário*/
+        form {
+            background-color: white;
+            max-width: 500px;
+            width: 70%;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        /*aplicando os estilos do formúlario na tag h3*/
+        form h3{
+            text-align: center;
+            color:#9370db ;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /*aplicando estilos do formulário no campo de texto e senha*/
+        form input[type=text],
+        form input[type=password] {
+            width: 100%;
+            height: 45px;
+            border: 1px solid #ccc;
+            padding-left: 10px;
+            margin: 10px 0;
+        }
+
+        /*aplicando estilos do botao de envio do formulário*/
+        form input[type=submit]{
+            width: 100%;
+            height: 30px;
+            cursor: pointer;
+            background: #9370db;
+            color: white;
+            border: 0;
+            border-radius: 20px;
+            transition:1%;
+        }
+        /*aplicando uma cor no botao de envio do formulário, ao passar o mouse em cima*/
+        form input[type=submit]:hover{
+            background-color:#845f99;
+        }
+        /* definindo o estilo do campo de texto ao receber o foco, e removendo o contorno ao redor. */
+        form input[type=text]:focus{
+            outline: 0;
+        }
+       /* definindo o estilo do campo de senha ao receber o foco, e removendo o contorno ao redor. */
+        form input[type=password]:focus{
+            outline: 0;
+        }
+
+        /*aplicando estilo no botao do formulário que redireciona para outra página.*/
+        form button{
+            width: 80%;
+            height: 25px;
+            margin: 3%;
+            margin-left:10% ;
+            cursor: pointer;
+            background-color: #9370db;
+            color: white;
+            border: 0;
+            border-radius: 20px;
+            transition:1%;
+            
+        }
+
+        /*adicionando estilos para o link que está no botao adicional do formulario.*/
+        form a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--adicionando uma ação para redirecionar para outra página ao clicar no botao "Entrar"-->
+    <form action="site.html">
+         <!--tag h3 para indicar o que se fazer no formulário-->
+        <h3>Faça seu login</h3>
+
+         <!--criando os campos de texto, senha, e um botao de envio.-->
+        <input id="email" type="text" name="email" placeholder="Digite seu email..."/ required>
+        <input id="password" type="password" name="senha" placeholder="Digite sua senha..."/ required>
+        <input type="submit"  name="acao" value="Entrar"/>
+        <!--botao adicional para redirecionar para a outra página.-->
+        <button > <a href="teladecadastro.html">Não possui conta? Cadastrar-se</a></button>
+    </form>
+    <script>
+
+        // obtendo o elemento de input com o id "email".
+            var email = document.getElementById('email');
+        // obtendo o elemento de input com o id "password".
+            var password = document.getElementById('password');
+
+       // adicionando um evento ao campo de e-mail quando ele recebe o foco e alterando a cor.
+        email.addEventListener('focus',()=>{
+            email.style.borderColor = "#5F7CBA"
+        });
+        // adicionando um evento ao campo de e-mail quando ele recebe o foco e alterando a cor.
+        email.addEventListener('blur',()=>{
+            email.style.borderColor = "#ccc"
+        });
+        // adicionando um evento ao campo de senha quando ela recebe o foco e alterando a cor.
+        password.addEventListener('focus',()=>{
+            password.style.borderColor = "#5F7CBA"
+        });
+        // adicionando um evento ao campo de senha quando ela recebe o foco e alterando a cor.
+        password.addEventListener('blur',()=>{
+            password.style.borderColor = "#ccc"
+        });
+        
+        </script>
+    
+</body>
+</html>
